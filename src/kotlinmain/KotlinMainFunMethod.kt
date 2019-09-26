@@ -2,14 +2,12 @@ package kotlinmain
 
 import kotlinexceptionhandling.ExceptionHandlingExample
 import kotlinfunction.FunctionExamples
-import kotlinfunction.RecursionAndTailRecursion
+import kotlinfunction.HigherOrderFunction
 
 
 fun main() {
     exceptionHandling()
     functionExample()
-    recursionFunction()
-    tailRecursionFunction()
 }
 fun exceptionHandling(){
     ExceptionHandlingExample().tryCatchFinally()
@@ -24,15 +22,12 @@ fun  functionExample(){
     FunctionExamples().userDefinedFunctionWithArguments(50)
     println("sum:${FunctionExamples().userDefinedFunctionWithArguments(10,20,30,40)}")
     FunctionExamples().inlineFunction()
-}
-fun recursionFunction(){
-    print("Enter a positive integer number: ")
-    val number: Int =Integer.valueOf(readLine())
-    val factorial = RecursionAndTailRecursion().fact(number)
-    println("Factorial of $number = $factorial")
-}
-fun tailRecursionFunction(){
-    val number = 6
-    val factorial = RecursionAndTailRecursion().fact(number)
-    println("Factorial of $number = $factorial")
+    FunctionExamples().recursionFunction()
+    FunctionExamples().tailRecursionFunction()
+    FunctionExamples().defaultArguments()
+    FunctionExamples().defaultArguments(99)
+    FunctionExamples().defaultArguments(99,'z')
+    FunctionExamples().namedArguments(ch='z')
+    FunctionExamples().lambdaFunction()
+    HigherOrderFunction().higherOrderFunction()
 }

@@ -22,4 +22,30 @@ class FunctionExamples {
         val sum={num1: Int,num2: Int->num1+num2}
         println("6+4= ${sum(6,4)}")
     }
+    fun recursionFunction(){
+        print("Enter a positive integer number: ")
+        val number: Int =Integer.valueOf(readLine())
+        val factorial = RecursionAndTailRecursion().fact(number)
+        println("Factorial of $number = $factorial")
+    }
+    fun tailRecursionFunction(){
+        val number = 6
+        val factorial = RecursionAndTailRecursion().fact(number)
+        println("Factorial of $number = $factorial")
+    }
+    fun defaultArguments(number:Int= 100, ch: Char ='A'){
+        println("Number is: $number and Character is: $ch")
+    }
+    fun namedArguments(number:Int= 100, ch: Char ='A'){
+        println("Number is: $number and Character is: $ch")
+    }
+    fun lambdaFunction(){
+        //lambda function
+        val sum = {num1: Int, num2: Int -> num1 + num2}
+        println("10+5: ${sum(10,5)}")
+    }
+    fun higherOrderFunction(){
+
+    }
+
 }
